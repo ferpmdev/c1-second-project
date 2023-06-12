@@ -9,7 +9,7 @@ const Recipes = () => {
 
     const apiKey = '68d481a0fbc340308fbf934f836ee8c6'
     const url = `https://api.spoonacular.com/food/search?apiKey=${apiKey}&query=${search}&number=10`;
-
+    // https://api.spoonacular.com/recipes/{id}/information
     useEffect(() => {
         axios(url)
         .then(res => setRecipes(res.data.searchResults[0].results))
